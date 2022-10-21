@@ -145,6 +145,10 @@
                 this.velMax= parseInt(!isNaN(velMax) && velMax > 0 ? velMax : 1);
             }
 
+            toString(){
+                return `| ID: ${this.id} | Modelo: ${this.modelo} | Año Fabricacion: ${this.anoFab} | Velocidad Maxima: ${this.velMax}`;
+            }
+
         }
 
         class Aereo extends Vehiculo {
@@ -153,6 +157,9 @@
                 this.altMax=parseInt(!isNaN(altMax) && altMax > 0 ? altMax : 1);
                 this.autonomia=parseInt(!isNaN(autonomia) && autonomia > 0 ? autonomia : 1);
             }
+            toString(){
+                return `${super.toString()} | Altura Maxima: ${this.altMax} | Autonomia: ${this.autonomia} \n`;
+            }
         }
 
         class Terrestre extends Vehiculo{
@@ -160,6 +167,9 @@
                 super(id,modelo,anoFab,velMax);
                 this.cantRue= parseInt(!isNaN(cantRue) && cantRue > 0 ? cantRue : 1);
                 this.cantPue= parseInt(!isNaN(cantPue) && cantPue > 0 ? cantPue : 1);
+            }
+            toString(){
+                return `${super.toString()} | Cantidad Puertas: ${this.cantPue} | Cantidad Ruedas: ${this.cantRue} \n`;
             }
         }
         
